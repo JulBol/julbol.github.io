@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- css integrations -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+        <title>Julian's CV</title>
+    </head>
+    <body>
+        <div id="main-container" class="container-fluid">
+          <div id="timeline" class="row d-flex justify-content-center">
+            <div>
+              <ol class="row">
+                <li>first</li>
+                <li>second</li>
+                <li>third</li>
+              </ol>
+              <ol id="myHr" class="row">
+                <li class="storyItem">
+                  <svg height="100" width="100">
+                   <circle data-index="1" cx="50" cy="25" r="10" stroke="black" stroke-width="2" fill="white" />
+                  </svg>
+                </li>
+                <li class="storyItem">
+                  <svg height="100" width="100">
+                   <circle data-index="2" cx="50" cy="25" r="10" stroke="black" stroke-width="2" fill="white" />
+                  </svg>
+                </li>
+                <li class="storyItem">
+                  <svg height="100" width="100">
+                   <circle data-index="3" cx="50" cy="25" r="10" stroke="black" stroke-width="2" fill="white" />
+                  </svg>
+                </li>
+              </ol>
+            </div>
+            <!-- <p>timeline</p> -->
+          </div>
+          <div id="content">
+            <div id="event0" class="event center">
+              <p>Welcome to my CV<p>
+            </div>
+            <div id="event1" class="event" style="display: none;">
+              <img src="images/city.jpg"/>
+            </div>
+            <div id="event2" class="event" style="display: none;">
+              <img src="images/mountain.png"/>
+            </div>
+            <div id="event3" class="event" style="display: none;">
+              <img src="images/forest.jpg"/>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- script integrations -->
+        <script src="js/libraries/jquery-3.3.1.js"></script>
+        <script src="js/libraries/knockout-3.4.2.js"></script>
+        <!-- <script src="js/viewmodels/eventViewmodel.js"></script> -->
+        <script src="js/libraries/tether.min.js"></script>
+        <script src="js/libraries/bootstrap.min.js"></script>
+
+        <!-- scripting -->
+        <script>
+        // ## Document Ready ##
+          $(document).ready(function(){
+
+            console.log("rdy");
+
+            $(".storyItem svg circle").on("click", function(){
+              console.log("clicked");
+              $('.event').css("display", "none");
+              console.log($(this)[0]);
+
+              //display choosen content
+              $(".event").each(function(){
+                $(this).css("display", "none");
+              });
+              var index = $(this).attr("data-index");
+              var myEvent = "event" + index;
+              $("#" + myEvent).css("display", "block");
+
+              //set all circles white
+              $(".storyItem svg circle").each(function(){
+                  $(this).attr("fill", "white");
+              });
+              //set color to choosen circle
+              $(this).attr("fill", "orange");
+            });
+          });
+
+
+        // ## Functions ##
+        </script>
+
+
+    </body>
+</html>
