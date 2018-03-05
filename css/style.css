@@ -8,7 +8,7 @@ body {
 #main-container {
     width   : 100%;
     height  : 100%;
-    padding: 50px 0;
+    padding : 50px 0;
 }
 
 #timeline {
@@ -54,4 +54,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.left_div{
+  width: 33.33%;
+  height: 100%;
+}
+.left_div img{
+  -webkit-filter: drop-shadow(5px 5px 5px #222 );
+  filter: drop-shadow(5px 5px 5px #222);
+  border-radius: 2px;
+}
+
+.right_div{
+  width: 66.66%;
+  height: 100%;
+}
+.contentTitle{
+  margin: 5%;
+}
+.content{
+  margin: 5%;
 }
