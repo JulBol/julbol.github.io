@@ -1,78 +1,117 @@
-/* Tags */
-body {
-    width   : 100%;
-    height  : 100%;
+html, body {
+    font: normal normal 16px Arial;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+p {
+    font-size: 40px;
+    margin: 100px 0 0 0;
 }
 
-/* IDs */
-#main-container {
-    width   : 100%;
-    height  : 100%;
-    padding : 50px 0;
+.nodisplay {
+    display: none !important;
 }
 
-#timeline {
-    border          : 1px solid rgba(57, 57, 57, 1);
-    width           : 90%;
-    margin          : 0 5%;
-    height          : 101px;
-}
-#timeline ol {
-  margin: 0;
-  padding: 0;
-}
-#timeline ol li{
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  display: flex;
-  justify-content: center;
-  /*border: 1px solid rgb(212, 91, 91);*/
-}
-#myHr{
-  border-top: 1px solid rgb(171, 171, 171);
-}
-#timeline ol li svg{
-  line-height: 50px;
-  height: 50px;
+#about {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-#content {
-  width: 80%;
-  margin: 50 10% 0 10%;
-  height: calc(100vh - 250px);
-  border: 1px solid black;
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Classes */
-.event{
-  width: 100%;
-  height: 100%;
-}
-
-.center{
+/* ########## */
+#left{
+  width: 50vw;
+  height: 100vh;
   display: flex;
   align-items: center;
+}
+#slogan{
+  font-size: 4em;
+  padding: 2em 1em 5em 2em;
+}
+#cv{
+  color: rgb(125, 255, 0);
+}
+#right{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#right div{
+  width: 100%;
+  padding: 0 2.5em 5em 0;
+}
+#image{
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
+#controls{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em 2em 2em;
+}
+/* ########## */
 
-.left_div{
-  width: 33.33%;
-  height: 100%;
-}
-.left_div img{
-  -webkit-filter: drop-shadow(5px 5px 5px #222 );
-  filter: drop-shadow(5px 5px 5px #222);
-  border-radius: 2px;
+/*
+* pages
+*/
+
+/*
+#divCenter {
+    background-color: #003366;
+    color: #FFFFFF;
+    display:inline-block;
 }
 
-.right_div{
-  width: 66.66%;
-  height: 100%;
+#divRight {
+    background-color: #F6BC0C;
+    color: #000000;
+    float:left;
 }
-.contentTitle{
-  margin: 5%;
+#divLeft {
+    background-color: #c00cf6;
+    color: #FFFFFF;
+    float:left;
 }
-.content{
-  margin: 5%;
+#divTop {
+    background-color: #0cdaf6;
+    color: #000000;
+    float:left;
+}
+#divBottom {
+    background-color: #0cf62b;
+    color: #000000;
+    float:left;
+}
+*/
+
+.divMap{
+  width: 25%;
+  max-width: 371px;
+  height: 15%;
+  max-height: 195px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.divMap img{
+   width: 100%;
+   height: 100%;
 }
